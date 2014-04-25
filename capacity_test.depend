@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1398236921 source:/home/lucky/workspace_pro/capacity_test/main.cpp
+	<iostream>
+	<pthread.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<semaphore.h>
+	<cstring>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<poll.h>
+	<netdb.h>
+	<fcntl.h>
+	<stdlib.h>
+
+1398405537 source:/home/lucky/workspace_pro/capacity_test_lua/main.cpp
+	<iostream>
+	<pthread.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<semaphore.h>
+	<cstring>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<poll.h>
+	<netdb.h>
+	<fcntl.h>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+
