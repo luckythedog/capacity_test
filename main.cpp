@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <ctime>
 #define SEND_BUFFER true
+unsigned int PORT_SPECIFIED;
 unsigned int clientNumber = 1;
 unsigned int failedConnections = 0;
 unsigned int failedSends = 0;
@@ -25,7 +26,7 @@ void* spawn_client(void*){
     unsigned int localSocket = socket(AF_INET, SOCK_STREAM, 0);
     clientNumber++;
     struct sockaddr_in serv_addr;
-    serv_addr.sin_port = htons(6666);
+    serv_addr.sin_port = htons(PORT_SPECIFIED);
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
@@ -48,6 +49,8 @@ void* spawn_client(void*){
 
 int main()
 {
+    std::cout << "Please enter the port of the server: ";
+    std::cin >> PORT_SPECIFIED;
     unsigned int numberOfClients;
     std::cout << "Please enter the number of clients you would like to spawn." << std::endl;
     while(std::cin >> numberOfClients){
